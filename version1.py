@@ -6,7 +6,7 @@ import Queue
 import time
 import wx 
 
-"""#dimensiunea maxima a cozilor
+#dimensiunea maxima a cozilor
 maxsize=10
 
 #cozile noastre
@@ -63,13 +63,14 @@ while True:
         seconds = seconds +1
         time.sleep(1)
     except KeyboardInterrupt, e:
-        break"""
+        break
 
 
 
 class MyFrame(wx.Frame): 
-    def __init__(self, parent=None, id=-1, title=None): 
-        wx.Frame.__init__(self, parent, id, title) 
+    def __init__(self, parent=None): 
+        wx.Frame.__init__(self, parent)
+        self.
         self.panel = wx.Panel(self, size=(1300, 700)) 
         self.panel.Bind(wx.EVT_PAINT, self.on_paint) 
         self.Fit() 
