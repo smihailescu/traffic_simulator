@@ -70,7 +70,7 @@ while True:
 class MyFrame(wx.Frame): 
     def __init__(self, parent=None, id=-1, title=None): 
         wx.Frame.__init__(self, parent, id, title) 
-        self.panel = wx.Panel(self, size=(100, 100)) 
+        self.panel = wx.Panel(self, size=(1300, 700)) 
         self.panel.Bind(wx.EVT_PAINT, self.on_paint) 
         self.Fit() 
 
