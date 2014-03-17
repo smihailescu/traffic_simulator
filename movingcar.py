@@ -12,26 +12,31 @@ tk.update()
 deplasareX=100
 deplasareY=245
 
-class Ball:
+class Car:
     def __init__(self, canvas, color):
         self.canvas = canvas
-        self.id = canvas.create_oval(10, 10, 25, 25, fill=color)
+        self.id = canvas.create_rectangle(50, 50, 25, 25, fill=color)
         self.canvas.move(self.id, deplasareY, deplasareX)
 
   # daca e 1 se misca in jos, daca e -1 se misca in sus
   
-    def draw(self):
+    def goright(self):
         self.canvas.move(self.id, 1, 0)
-        
-ball = Ball(canvas, 'red')
 
-while 1:
-    deplasareX = deplasareX +20
-    deplasareY = deplasareY +20
-   # if( == 400):
-    #    deplasareY = 0
-     #   deplasareX = 0
-    ball.draw()
+    def godown(self):
+        self.canvas.move(self.id, 0, 1)
+        
+car = Car(canvas, 'red')
+
+while True:
+    if (deplasareX<400):
+        deplasareX=deplasareX+1
+        car.goright()
+    elif (deplasareY<500):
+        deplasareY=deplasareY+1
+        car.godown()
+    else:
+        car.goright()
     tk.update_idletasks()
     tk.update()
     time.sleep(0.01)
