@@ -59,15 +59,7 @@ class Car:
     def godown(self):
         self.canvas.move(self.id, 0, 1)
 
-#cream masina pe stanga       
-#car1 = Car(canvas, 'Dark Green', 0, 300)
-#cream masina pe dreapta
-#car2 = Car(canvas, 'Seashell', 450, 0)
 
-#cream semaforul de sus
-#semafor_sus = Semafor(canvas, 'green',390,240)
-#cream semaforul din stanga
-#semafor_stanga=Semafor(canvas,'red',390,385)
 
 def ThreadGenerareMasini():
     global stanga,sus
